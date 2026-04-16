@@ -23,8 +23,7 @@ uninstall() {
 install() {
     echo -e "\n➜ Installing dependencies...\n"
     set -ex
-    sudo apt update
-    sudo apt -y install python3 python3-pip virtualenv nodejs
+    brew install python3 virtualenv node
     set +ex
     
     echo -e "\n➜ Cloning YT-DLP...\n"
@@ -54,9 +53,8 @@ install() {
 update() {
     echo -e "\n➜ Updating system...\n"
     set -ex
-    sudo apt update
-    sudo apt -y upgrade
-    sudo apt -y autoremove
+    brew update
+    brew upgrade
     set +ex
     
     echo -e "\n➜ Updating YT-DLP...\n"
