@@ -68,6 +68,7 @@ update() {
     echo -e "\n➜ Updating virtual environment...\n"
     set -ex
     source venv/bin/activate
+    pip install --upgrade pip
     pip install -U yt-dlp-ejs certifi build
     set +ex
 
